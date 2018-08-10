@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/break_down_img_iv"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/break_down"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="50dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/break_down_img_iv"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/shape_rectangle_gray_corner"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/break_down_reason_title_tv"
+            style="@style/break_down_text_style"
+            android:text="@string/err_reason_title" />
+        <TextView
+            android:id="@+id/break_down_reason_tv"
+            style="@style/break_down_text_style"/>
+        <TextView
+            android:id="@+id/break_down_contract_title_tv"
+            style="@style/break_down_text_style"
+            android:text="@string/contract_title"/>
+        <TextView
+            android:id="@+id/break_down_contract_info_tv"
+            style="@style/break_down_text_style"/>
+    </LinearLayout>
+
+
+
+</RelativeLayout>

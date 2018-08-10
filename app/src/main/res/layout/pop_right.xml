@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/pop_right_operate_ll"
+        android:layout_width="@dimen/pop_right_width"
+        android:layout_height="match_parent"
+        android:padding="@dimen/pop_operate_border_padding"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_gravity="end">
+
+        <FrameLayout
+            android:id="@+id/pop_right_quit_fl"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:src="@drawable/pop_right_blank"
+                android:scaleType="fitCenter"/>
+            <TextView
+                android:id="@+id/pop_right_quit_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@color/quit_red"
+                android:textStyle="bold"
+                android:text="@string/operate_quit_time"
+                android:textSize="@dimen/pop_right_text_size"/>
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/pop_right_hot_water"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="@dimen/pop_right_element_margin"
+            android:layout_gravity="center"
+            android:src="@drawable/pop_right_hot"
+            android:scaleType="fitCenter"
+            android:tag="@string/hot_water"/>
+
+        <ImageView
+            android:id="@+id/pop_right_warm_water"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="@dimen/pop_right_element_margin"
+            android:layout_gravity="center"
+            android:src="@drawable/pop_right_warm"
+            android:scaleType="fitCenter"
+            android:tag="@string/warm_water"/>
+
+        <ImageView
+            android:id="@+id/pop_right_cool_water"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="@dimen/pop_right_element_margin"
+            android:layout_gravity="center"
+            android:src="@drawable/pop_right_cold"
+            android:scaleType="fitCenter"
+            android:tag="@string/cool_water"/>
+
+        <ImageView
+            android:id="@+id/pop_right_get_cup"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="@dimen/pop_right_element_margin"
+            android:layout_gravity="center"
+            android:src="@drawable/pop_right_cup"
+            android:scaleType="fitCenter"
+            android:tag="@string/get_cup"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/sorrypng"
+    tools:context="com.xhh.ysj.view.activity.DpSpPX">
+
+    <TextView
+        android:id="@+id/getDensity"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="获取density"
+        />
+
+    <TextView
+        android:id="@+id/getDensityvalue"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        />
+
+
+    <EditText
+        android:id="@+id/pxvalue"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="输入像素"
+        />
+
+    <TextView
+        android:id="@+id/getdp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="点击获取dp"
+        />
+
+
+    <TextView
+        android:id="@+id/dpvalue"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        />
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>

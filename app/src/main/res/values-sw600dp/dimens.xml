@@ -1,0 +1,43 @@
+<resources>
+    <dimen name="margin_top">20dp</dimen>
+    <dimen name="middle_margin">20dp</dimen>
+
+    <!--字体大小-->
+    <dimen name="break_down_text_size">25sp</dimen>
+    <dimen name="pop_water_sale_text_size_big">24sp</dimen>  <!--popWaterSale、popQrcode-->
+    <dimen name="pop_water_sale_text_size_little">12sp</dimen>
+
+    <!--操作PopupWindow-->
+    <dimen name="pop_operate_border_padding">19dp</dimen>
+    <dimen name="pop_left_width">196dp</dimen>
+    <dimen name="pop_left_element_margin">9dp</dimen>  <!--通用布局使用-->
+    <dimen name="pop_left_temp_top_margin">15dp</dimen>
+    <dimen name="pop_left_tds_top_margin">15dp</dimen>
+    <dimen name="pop_left_mode_top_margin">25dp</dimen>
+    <dimen name="pop_left_operate_top_margin">25dp</dimen>
+    <dimen name="pop_left_temp_start_margin">6dp</dimen>
+    <dimen name="pop_left_tsd_start_margin">11dp</dimen>
+    <dimen name="pop_left_icon_side_length">40dp</dimen>
+    <dimen name="pop_left_text_size_tds_value">18sp</dimen>
+    <dimen name="pop_left_text_size_temp">22sp</dimen>
+    <dimen name="pop_left_text_size_mode_and_tds">16sp</dimen>
+    <dimen name="pop_left_text_size_tds_unit">14sp</dimen>
+    <dimen name="pop_left_text_size_id">15sp</dimen>
+    <dimen name="pop_left_text_size_icon_text">15sp</dimen>
+    <dimen name="pop_right_width">138dp</dimen> <!--113-->
+    <dimen name="pop_right_element_margin">12dp</dimen>
+    <dimen name="pop_right_text_size">16sp</dimen>
+
+    <!--pop_water_sale-->
+    <dimen name="pop_water_sale_width">400dp</dimen>
+    <dimen name="pop_water_sale_height">270dp</dimen>
+
+    <!--pop warning-->
+    <dimen name="pop_warning_msg_margin_top">35dp</dimen>
+    <dimen name="pop_warning_msg_margin_bottom">15dp</dimen>
+    <dimen name="pop_warning_button_margin">45dp</dimen>
+    <dimen name="pop_warning_title_text_size">28sp</dimen>
+    <dimen name="pop_warning_msg_text_size">26sp</dimen>
+    <dimen name="pop_warning_button_text_size">28sp</dimen>
+
+</resources>

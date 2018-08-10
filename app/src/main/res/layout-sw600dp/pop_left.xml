@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/left_operate"
+        android:layout_width="@dimen/pop_left_width"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/pop_operate_border_padding">
+
+        <!--设备编号-->
+        <TextView
+            android:id="@+id/device_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/pop_left_text_size_tds_unit"
+            android:text="设备编号："/>
+
+        <!--温度计-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:layout_marginTop="@dimen/pop_left_temp_top_margin"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/thermometer"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/pop_left_thermometer"
+                android:scaleType="fitCenter"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@id/thermometer"
+                android:layout_marginStart="@dimen/pop_left_temp_start_margin"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/hot_water_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="热93℃"
+                    android:textSize="@dimen/pop_left_text_size_temp"
+                    android:textColor="@color/red_index" />
+
+                <TextView
+                    android:id="@+id/cool_water_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="冷18℃"
+                    android:textSize="@dimen/pop_left_text_size_temp"
+                    android:textColor="@color/blue_temp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!--净水监测 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/pop_left_tds_top_margin">
+
+            <TextView
+                android:id="@+id/pop_operate_p_tds_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start|center_vertical"
+                android:gravity="center"
+                android:text="@string/out_tds"
+                android:textColor="@color/white"
+                android:textSize="@dimen/pop_left_text_size_mode_and_tds" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/pop_left_tsd_start_margin"
+                android:layout_toEndOf="@id/pop_operate_p_tds_title">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/pop_left_drip"
+                    android:scaleType="fitCenter"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/out_ppm_rate_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="88%"
+                    android:gravity="center"
+                    android:textColor="@color/blue_tds"
+                    android:textSize="@dimen/pop_left_text_size_tds_value"
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:id="@+id/out_ppm_value_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/out_ppm_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.5"
+                        android:gravity="center_horizontal|bottom"
+                        android:text="91"
+                        android:textColor="@color/blue_tds"
+                        android:textSize="@dimen/pop_left_text_size_tds_value" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|top"
+                        android:text="@string/ppm"
+                        android:textColor="@color/blue_tds"
+                        android:textSize="@dimen/pop_left_text_size_tds_unit" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:background="@color/transparent" />
+                </LinearLayout>
+            </FrameLayout>
+        </RelativeLayout>
+
+        <!--原水监测-->
+        <RelativeLayout
+            android:id="@+id/pop_operate_r_tds_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/raw_water_tds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:gravity="center"
+                android:text="@string/raw_tds"
+                android:textColor="@color/white"
+                android:textSize="@dimen/pop_left_text_size_mode_and_tds" />
+
+            <TextView
+                android:id="@+id/raw_ppm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/raw_water_tds"
+                android:layout_marginStart="@dimen/pop_left_tsd_start_margin"
+                android:text="2184PPM"
+                android:textColor="@color/white"
+                android:textSize="@dimen/pop_left_text_size_mode_and_tds" />
+        </RelativeLayout>
+
+        <!--饮水模式-->
+        <TextView
+            android:id="@+id/drink_mode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/pop_left_mode_top_margin"
+            android:text="零售模式"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/pop_left_text_size_mode_and_tds"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="（新鸿海多媒体）"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/pop_left_text_size_mode_and_tds"/>
+
+        <!--设备操作1  android:layout_height="wrap_content"-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:layout_marginTop="@dimen/pop_left_operate_top_margin"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/to_be_hot"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/hot_ico"
+                    android:layout_width="@dimen/pop_left_icon_side_length"
+                    android:layout_height="@dimen/pop_left_icon_side_length"
+                    android:background="@drawable/pop_left_heat" />
+
+                <TextView
+                    android:id="@+id/hot_or_not"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/jiare"
+                    android:textColor="@color/red_index"
+                    android:textSize="@dimen/pop_left_text_size_tds_unit" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/to_be_cool"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/cool_ico"
+                    android:layout_width="@dimen/pop_left_icon_side_length"
+                    android:layout_height="@dimen/pop_left_icon_side_length"
+                    android:background="@drawable/pop_left_cool" />
+
+                <TextView
+                    android:id="@+id/cooltext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="@string/zhileng"
+                    android:textColor="@color/blue_tds"
+                    android:textSize="@dimen/pop_left_text_size_tds_unit" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--设备操作2-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:layout_marginTop="@dimen/pop_left_element_margin"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:id="@+id/produce_water"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/produce_water_ico"
+                    android:layout_width="@dimen/pop_left_icon_side_length"
+                    android:layout_height="@dimen/pop_left_icon_side_length"
+                    android:background="@drawable/pop_left_produce" />
+
+                <TextView
+                    android:id="@+id/produce_water_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/produce"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/pop_left_text_size_tds_unit" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/flush"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/flush_ico"
+                    android:layout_width="@dimen/pop_left_icon_side_length"
+                    android:layout_height="@dimen/pop_left_icon_side_length"
+                    android:background="@drawable/clean" />
+
+                <TextView
+                    android:id="@+id/flush_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/chongxi"
+                    android:textColor="@color/blue_tds"
+                    android:textSize="@dimen/pop_left_text_size_tds_unit" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
